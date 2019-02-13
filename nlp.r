@@ -101,6 +101,36 @@ theme_lyrics <- function()
         legend.position = "none")
 }
 
+prince %>%
+  filter(decade != "NA") %>%
+  group_by(decade, charted) %>%
+  summarise(number_of_songs = n()) %>%
+  ggplot() + 
+  geom_bar(aes(x = decade, y = number_of_songs, 
+               fill = charted), stat = "identity")  +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.title = element_blank(),
+        panel.grid.minor = element_blank()) +
+  ggtitle("Released Songs") +
+  labs(x = NULL, y = "Song Count")
+  ggsave("output/plot_charted1.png")
+
+
+prince %>%
+  filter(decade != "NA") %>%
+  group_by(decade, charted) %>%
+  summarise(number_of_songs = n()) %>%
+  ggplot() + 
+  geom_bar(aes(x = decade, y = number_of_songs, 
+               fill = charted), stat = "identity")  +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.title = element_blank(),
+        panel.grid.minor = element_blank()) +
+  ggtitle("Released Songs") +
+  labs(x = NULL, y = "Song Count")
+
+  ggsave("output/plot_top1.png")
+
 
 
 
