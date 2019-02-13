@@ -3,6 +3,6 @@
 
 ## Natural Language Processing
 - ./run.sh
- - Run scripts supporting text preparation, plotting etc...
+  - Run scripts supporting text preparation, plotting etc...
 
 
