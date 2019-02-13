@@ -1,3 +1,2 @@
 
-
-Rscript nlp.r > output/nlp_output.Rout
+Rscript nlp.r > output/output.Rout
